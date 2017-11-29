@@ -39,6 +39,7 @@ public class CommentaireService implements DatabaseConstants {
     public void update(CommentaireUWs commentaireUWs) throws SQLException {
         Commentaire commentaire = new Commentaire();
         commentaire.setId(commentaireUWs.getId());
+        commentaire.setEntityId(commentaireUWs.getEntityId());
         commentaire.setContenu(commentaireUWs.getContenu());
         commentaire.setEntityType(commentaireUWs.getEntityType());
         commentaire.setPseudo(commentaireUWs.getPseudo());
