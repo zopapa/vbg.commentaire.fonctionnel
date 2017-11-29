@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.bootcamp</groupId>
-    <artifactId>CathegoriesRestServices</artifactId>
+    <artifactId>CommentaireRestServices</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>CathegoriesRestServices</name>
+    <name>CommentaireRestServices</name>
     <url>http://maven.apache.org</url>
 
     <properties>
