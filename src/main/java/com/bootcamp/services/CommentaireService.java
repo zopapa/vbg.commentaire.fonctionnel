@@ -27,6 +27,8 @@ public class CommentaireService implements DatabaseConstants {
         commentaire.setContenu(commentaireUWs.getContenu());
         commentaire.setEntityType(commentaireUWs.getEntityType());
         commentaire.setPseudo(commentaireUWs.getPseudo());
+        commentaire.setUserId(commentaireUWs.getUserId());
+        commentaire.setUserMail(commentaireUWs.getUserMail());
         commentaire.setDateCreation(commentaireUWs.getDateCreation());
         commentaire.setDateMiseAJour(commentaireUWs.getDateMiseAJour());
         
