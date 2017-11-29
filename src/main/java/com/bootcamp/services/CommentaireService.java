@@ -24,6 +24,7 @@ public class CommentaireService implements DatabaseConstants {
     public int create(CommentaireUWs commentaireUWs) throws SQLException {
         Commentaire commentaire = new Commentaire();
         commentaire.setId(commentaireUWs.getId());
+        commentaire.setEntityId(commentaireUWs.getEntityId());
         commentaire.setContenu(commentaireUWs.getContenu());
         commentaire.setEntityType(commentaireUWs.getEntityType());
         commentaire.setPseudo(commentaireUWs.getPseudo());
@@ -31,7 +32,7 @@ public class CommentaireService implements DatabaseConstants {
         commentaire.setUserMail(commentaireUWs.getUserMail());
         commentaire.setDateCreation(commentaireUWs.getDateCreation());
         commentaire.setDateMiseAJour(commentaireUWs.getDateMiseAJour());
-        
+
         CommentaireCRUD.create(commentaire);
         return commentaire.getId();
     }
@@ -45,23 +46,34 @@ public class CommentaireService implements DatabaseConstants {
         commentaire.setPseudo(commentaireUWs.getPseudo());
         commentaire.setDateCreation(commentaireUWs.getDateCreation());
         commentaire.setDateMiseAJour(commentaireUWs.getDateMiseAJour());
-        
+
         CommentaireCRUD.update(commentaire);
     }
 
-    public Commentaire delete(int id) throws SQLException {
-        Commentaire commentaire = read(id);
-        CommentaireCRUD.delete(commentaire);
+//    public Commentaire delete(int id) throws SQLException {
+//        Commentaire commentaire = read(id);
+//        CommentaireCRUD.delete(commentaire);
+//        return commentaire;
+//    }
 
-        return commentaire;
-    }
-
-    public Commentaire read(int id) throws SQLException {
+    public CommentaireUWs read(int id) throws SQLException {
+        CommentaireUWs commentaireUWs = new CommentaireUWs();
         Criterias criterias = new Criterias();
         criterias.addCriteria(new Criteria("id", "=", id));
         List<Commentaire> commentaires = CommentaireCRUD.read(criterias);
+        Commentaire commentaire = commentaires.get(0);
 
-        return commentaires.get(0);
+        commentaireUWs.setId(commentaire.getId());
+        commentaireUWs.setEntityId(commentaire.getEntityId());
+        commentaireUWs.setContenu(commentaire.getContenu());
+        commentaireUWs.setEntityType(commentaire.getEntityType());
+        commentaireUWs.setPseudo(commentaire.getPseudo());
+        commentaireUWs.setUserId(commentaire.getUserId());
+        commentaireUWs.setUserMail(commentaire.getUserMail());
+        commentaireUWs.setDateCreation(commentaire.getDateCreation());
+        commentaireUWs.setDateMiseAJour(commentaire.getDateMiseAJour());
+
+        return commentaireUWs;
     }
 
     public List<Commentaire> read(HttpServletRequest request) throws SQLException, IllegalAccessException, DatabaseException, InvocationTargetException {
