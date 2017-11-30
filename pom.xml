@@ -156,6 +156,7 @@
     </dependencies>
 
     <build>
+        <finalName>commentaireRestServices</finalName>
         <plugins>
             <!-- Package as an executable jar/war -->
             <plugin>
