@@ -43,9 +43,9 @@ public class CommentaireService implements DatabaseConstants {
     }
     
     public List<Commentaire> getByEntity(int entityId, EntityType entityType) throws SQLException {
-        List<Criteria> criterias = new ArrayList<Criteria>();
-        criterias.add(new Criteria(new Rule("entityId", "=", entityId), "AND"));
-        criterias.add(new Criteria(new Rule("entityType", "=", entityType), null));
-        return CommentaireCRUD.getByCriteria(criterias);
+        Criterias criterias = new Criterias();
+        criterias.addCriteria(new Criteria(new Rule("entityId", "=", entityId), "AND"));
+        criterias.addCriteria(new Criteria(new Rule("entityType", "=", entityType), null));
+        return CommentaireCRUD.read(criterias);
     }
 }
