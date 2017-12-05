@@ -20,7 +20,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @RestController("CommentaireController")
-@RequestMapping("/comment")
+@RequestMapping("/commentaires")
 @Api(value = "Commentaire API", description = "Commentaire API")
 @CrossOrigin(origins = "*")
 public class CommentaireController {
@@ -31,16 +31,15 @@ public class CommentaireController {
     @Autowired
     HttpServletRequest request;
 
-    @RequestMapping(method = RequestMethod.POST, value = "/")
+    @RequestMapping(method = RequestMethod.POST)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "Create a new commentaire", notes = "Create a new commentaire")
-    public ResponseEntity<Commentaire> create(@RequestBody @Valid Commentaire commentaire) {
+    public ResponseEntity<Commentaire> create(@RequestBody @Valid Commentaire comment) {
 
         HttpStatus httpStatus = null;
 
-        Commentaire comment = new Commentaire();
         try {
-            comment = commentaireService.create(commentaire);
+            comment = commentaireService.create(comment);
             httpStatus = HttpStatus.OK;
         } catch (SQLException ex) {
             Logger.getLogger(CommentaireController.class.getName()).log(Level.SEVERE, null, ex);
