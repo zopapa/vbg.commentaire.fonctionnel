@@ -16,7 +16,7 @@
 [[1;34mINFO[m] 
 [[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mCommentaireRestServices[0;1m ---[m
 [[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
-[[1;34mINFO[m] Copying 8 resources
+[[1;34mINFO[m] Copying 13 resources
 [[1;34mINFO[m] 
 [[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mCommentaireRestServices[0;1m ---[m
 [[1;34mINFO[m] Nothing to compile - all classes are up to date
@@ -49,6 +49,5 @@ log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more in
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v1.5.8.RELEASE)
 
-[32m2017-12-04 21:35:20.853 WAT [background-preinit] o.h.v.i.u.Version INFO : HV000001: Hibernate Validator 5.3.5.Final
-[m[EL Info]: 2017-12-04 21:38:03.568--ServerSession(15246826)--EclipseLink, version: Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd
-[EL Info]: connection: 2017-12-04 21:38:04.729--ServerSession(15246826)--file:/C:/Users/soul/.m2/repository/com/bootcamp/db-access/1.0-SNAPSHOT/db-access-1.0-SNAPSHOT.jar_databasePU login successful
+[32m2017-12-05 09:05:11.731 WAT [background-preinit] o.h.v.i.u.Version INFO : HV000001: Hibernate Validator 5.3.5.Final
+[m

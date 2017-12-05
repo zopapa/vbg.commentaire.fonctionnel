@@ -22,6 +22,7 @@ import java.util.logging.Logger;
 @RestController("CommentaireController")
 @RequestMapping("/comment")
 @Api(value = "Commentaire API", description = "Commentaire API")
+@CrossOrigin(origins = "*")
 public class CommentaireController {
 
     @Autowired
