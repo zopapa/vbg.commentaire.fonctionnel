@@ -34,18 +34,18 @@ public class CommentaireController {
     @RequestMapping(method = RequestMethod.POST, value = "/")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "Create a new commentaire", notes = "Create a new commentaire")
-    public ResponseEntity<Integer> create(@RequestBody @Valid Commentaire commentaire) {
+    public ResponseEntity<Commentaire> create(@RequestBody @Valid Commentaire commentaire) {
 
         HttpStatus httpStatus = null;
 
-        int id = -1;
+        Commentaire comment = new Commentaire();
         try {
-            id = commentaireService.create(commentaire);
+            comment = commentaireService.create(commentaire);
             httpStatus = HttpStatus.OK;
         } catch (SQLException ex) {
             Logger.getLogger(CommentaireController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return new ResponseEntity<Integer>(id, httpStatus);
+        return new ResponseEntity<Commentaire>(comment, httpStatus);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")

@@ -19,9 +19,11 @@ import java.util.List;
 @Component
 public class CommentaireService implements DatabaseConstants {
 
-    public int create(Commentaire commentaire) throws SQLException {
+    public Commentaire create(Commentaire commentaire) throws SQLException {
+        commentaire.setDateCreation(System.currentTimeMillis());
+        commentaire.setDateMiseAJour(System.currentTimeMillis());
         CommentaireCRUD.create(commentaire);
-        return commentaire.getId();
+        return commentaire;
     }
 
     public int update(Commentaire commentaire) throws SQLException {
