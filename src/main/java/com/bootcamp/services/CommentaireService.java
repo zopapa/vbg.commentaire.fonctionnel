@@ -10,6 +10,7 @@ import com.bootcamp.entities.Commentaire;
 import org.springframework.stereotype.Component;
 
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,14 +20,16 @@ import java.util.List;
 @Component
 public class CommentaireService implements DatabaseConstants {
 
-    public int create(Commentaire commentaire) throws SQLException {
+    public Commentaire create(Commentaire commentaire) throws SQLException {
+        commentaire.setDateCreation(System.currentTimeMillis());
+        commentaire.setDateMiseAJour(System.currentTimeMillis());
         CommentaireCRUD.create(commentaire);
-        return commentaire.getId();
+        return commentaire;
     }
 
-    public int update(Commentaire commentaire) throws SQLException {
+    public Commentaire update(Commentaire commentaire) throws SQLException {
         CommentaireCRUD.update(commentaire);
-        return commentaire.getId();
+        return commentaire;
     }
 
     public Commentaire delete(int id) throws SQLException {
@@ -43,9 +46,9 @@ public class CommentaireService implements DatabaseConstants {
     }
     
     public List<Commentaire> getByEntity(int entityId, EntityType entityType) throws SQLException {
-        List<Criteria> criterias = new ArrayList<Criteria>();
-        criterias.add(new Criteria(new Rule("entityId", "=", entityId), "AND"));
-        criterias.add(new Criteria(new Rule("entityType", "=", entityType), null));
-        return CommentaireCRUD.getByCriteria(criterias);
+        Criterias criterias = new Criterias();
+        criterias.addCriteria(new Criteria(new Rule("entityId", "=", entityId), "AND"));
+        criterias.addCriteria(new Criteria(new Rule("entityType", "=", entityType), null));
+        return CommentaireCRUD.read(criterias);
     }
 }
