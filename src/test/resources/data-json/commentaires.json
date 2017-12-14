@@ -2,7 +2,7 @@
   {
     "id":1,
     "entityType" : "ETAPE",
-    "entityId" : 7,
+    "entityId" : 1,
     "contenu" : "un commentaire sur le etape 7",
     "dateCreation" : 1511907379,
     "dateMiseAJour" : 1511907379,
@@ -11,7 +11,7 @@
   {
     "id":2,
     "entityType" : "ETAPE",
-    "entityId" : 5,
+    "entityId" : 2,
     "contenu" : "un commentaire sur le etape 5",
     "dateCreation" : 1511907379,
     "dateMiseAJour" : 1511907379,
@@ -37,9 +37,9 @@
   },
   {
     "id":5,
-    "entityType" : "MEDIA",
+    "entityType" : "PLAINTE",
     "entityId" : 2,
-    "contenu" : "un commentaire sur le pilier 2",
+    "contenu" : "un commentaire sur le plainte 5",
     "dateCreation" : 1511907379,
     "dateMiseAJour" : 1511907379,
     "userId" : 1
