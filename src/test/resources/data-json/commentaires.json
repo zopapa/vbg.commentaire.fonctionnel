@@ -1,0 +1,47 @@
+[
+  {
+    "id":1,
+    "entityType" : "ETAPE",
+    "entityId" : 7,
+    "contenu" : "un commentaire sur le etape 7",
+    "dateCreation" : 1511907379,
+    "dateMiseAJour" : 1511907379,
+    "userId" : 23
+  },
+  {
+    "id":2,
+    "entityType" : "ETAPE",
+    "entityId" : 5,
+    "contenu" : "un commentaire sur le etape 5",
+    "dateCreation" : 1511907379,
+    "dateMiseAJour" : 1511907379,
+    "userId" : 24
+  },
+  {
+    "id":3,
+    "entityType" : "PLAINTE",
+    "entityId" : 2,
+    "contenu" : "un commentaire sur la plainte 2",
+    "dateCreation" : 1511907379,
+    "dateMiseAJour" : 1511907379,
+    "userId" : 2
+  },
+  {
+    "id":4,
+    "entityType" : "PLAINTE",
+    "entityId" : 3,
+    "contenu" : "un commentaire sur la plainte 3",
+    "dateCreation" : 1511907379,
+    "dateMiseAJour" : 1511907379,
+    "userId" : 1
+  },
+  {
+    "id":5,
+    "entityType" : "MEDIA",
+    "entityId" : 2,
+    "contenu" : "un commentaire sur le pilier 2",
+    "dateCreation" : 1511907379,
+    "dateMiseAJour" : 1511907379,
+    "userId" : 1
+  }
+]
