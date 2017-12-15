@@ -6,9 +6,9 @@ import com.bootcamp.commons.exceptions.DatabaseException;
 import com.bootcamp.commons.models.Criteria;
 import com.bootcamp.commons.models.Criterias;
 import com.bootcamp.commons.models.Rule;
-import com.bootcamp.commons.ws.utils.RequestParser;
 import com.bootcamp.crud.CommentaireCRUD;
 import com.bootcamp.entities.Commentaire;
+import com.bootcamp.utils.RequestParser;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
